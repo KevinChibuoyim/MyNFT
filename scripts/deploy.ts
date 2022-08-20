@@ -1,31 +1,30 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  
-//   const CONTRACT_ADDR = "0xc282D1dc943b3d690D55434f616c9Cfc925166bB";
-//   const Receiver_Addr = "0x70cb398f3458dB6CAd9A64d443e0B36FEa8A0431";
-// //   const URI = "ipfs://QmabyQ5jfXzMawFXNaZ76LA8RzNzfhy4bCqnWAKzNCR7e7";
+ 
+  const URI = "ipfs://QmabyQ5jfXzMawFXNaZ76LA8RzNzfhy4bCqnWAKzNCR7e7";
+  const [deployer] = await ethers.getSigners();
 
+  console.log(`Address Deploying the contract: ${deployer.address}`)
 
-//   const setNFT = await ethers.getContractAt("ImyNFT", CONTRACT_ADDR);
-//        await setNFT.safeMint(Receiver_Addr, 0, URI);
-
-       
-
-  const MyNFT = await ethers.getContractFactory("NFT");
+  const MyNFT = await ethers.getContractFactory("EzemmuoBlockchain");
   const myNft = await MyNFT.deploy();
+
+  // Minting the NFT to the deployer
+
+  await myNft.connect(deployer).safeMint(deployer.address, 0, URI);
 
   await myNft.deployed();
 
   console.log(
-    `Minted my NFT to: ${myNft.address}`
+    `NFT Token Contract Address: ${myNft.address}`
   );
 }
 
-// Deployed Contract Address: 0xc282D1dc943b3d690D55434f616c9Cfc925166bB
+//Deployed NFT Contract Address: 0xf3f23d7DF207B339d2887605cE4F3AD8A0e353c9
+//Txn hash on Etherscan: https://rinkeby.etherscan.io/address/0xf3f23d7DF207B339d2887605cE4F3AD8A0e353c9
+//Opensea NFT link: https://testnets.opensea.io/assets/rinkeby/0xf3f23d7df207b339d2887605ce4f3ad8a0e353c9/0
 
-// We recommend this pattern to be able to use async/await everywhere
-// and properly handle errors.
 main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
