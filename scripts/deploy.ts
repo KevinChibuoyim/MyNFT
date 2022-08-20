@@ -22,7 +22,7 @@ async function main() {
 }
 
 //Deployed NFT Contract Address: 0xf3f23d7DF207B339d2887605cE4F3AD8A0e353c9
-//Txn hash on Etherscan: https://rinkeby.etherscan.io/address/0xf3f23d7DF207B339d2887605cE4F3AD8A0e353c9
+//Txn hash on Rinkeby Etherscan: https://rinkeby.etherscan.io/address/0xf3f23d7DF207B339d2887605cE4F3AD8A0e353c9
 //Opensea NFT link: https://testnets.opensea.io/assets/rinkeby/0xf3f23d7df207b339d2887605ce4f3ad8a0e353c9/0
 
 main().catch((error) => {
