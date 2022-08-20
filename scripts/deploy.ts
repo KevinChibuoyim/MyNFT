@@ -2,7 +2,7 @@ import { ethers } from "hardhat";
 
 async function main() {
  
-  const URI = "ipfs://QmabyQ5jfXzMawFXNaZ76LA8RzNzfhy4bCqnWAKzNCR7e7";
+  const URI = "ipfs://QmWpcNrUhtSSX3S2ddr6yH3b6wLc6KaALyuGiCqbqzfLpK";
   const [deployer] = await ethers.getSigners();
 
   console.log(`Address Deploying the contract: ${deployer.address}`)
