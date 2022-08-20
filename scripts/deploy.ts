@@ -21,9 +21,9 @@ async function main() {
   );
 }
 
-//Deployed NFT Contract Address: 0xf3f23d7DF207B339d2887605cE4F3AD8A0e353c9
-//Txn hash on Rinkeby Etherscan: https://rinkeby.etherscan.io/address/0xf3f23d7DF207B339d2887605cE4F3AD8A0e353c9
-//Opensea NFT link: https://testnets.opensea.io/assets/rinkeby/0xf3f23d7df207b339d2887605ce4f3ad8a0e353c9/0
+//Deployed NFT Contract Address: 0xa38E0064a0aA1FDb03f1D3eDB6B4b334773F3156
+//Txn hash on Rinkeby Etherscan: https://rinkeby.etherscan.io/address/0xa38E0064a0aA1FDb03f1D3eDB6B4b334773F3156
+//Opensea NFT link: https://testnets.opensea.io/assets/rinkeby/0xa38E0064a0aA1FDb03f1D3eDB6B4b334773F3156/0
 
 main().catch((error) => {
   console.error(error);
